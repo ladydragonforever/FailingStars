@@ -8,7 +8,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx', '*']
+        extensions: ['.js', '.jsx', '.scss', '*']
     },
     module: {
         rules: [
@@ -21,6 +21,11 @@ module.exports = {
                         presets: ['@babel/env', '@babel/react']
                     }
                 },
+            },
+            {
+                test: /\.scss$/,
+                exclude: /(node_modules)/,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
             }
         ]
     },
