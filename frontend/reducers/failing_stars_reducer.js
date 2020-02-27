@@ -1,5 +1,6 @@
 import {RECEIVE_STAR, RECEIVE_ERRORS} from "../actions/failing_stars_actions"
-
+//Theoretically we should have a normalized state shape;
+// Considering the simple use case, I did a simplified version of the state shape;
 const failingStarsReducer = (state={stars:[]}, action) => {
     Object.freeze(state);
     switch(action.type) {
