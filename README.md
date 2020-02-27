@@ -4,7 +4,7 @@
 
 1. `npm install` -- install packages and dependencies
 2. `npm start` -- run webpack
-3. `npm test` -- run tset
+3. `npm test` -- run test
 
 Redux tests:
 
