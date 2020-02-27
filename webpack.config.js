@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     context: __dirname,
-    entry: './frontend/failing_stars.jsx',
+    entry: './frontend/failing_stars_modal.jsx',
     output: {
         path: path.resolve(__dirname),
         filename: 'bundle.js'

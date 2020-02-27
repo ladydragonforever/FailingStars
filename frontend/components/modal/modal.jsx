@@ -13,7 +13,7 @@ class Modal extends React.Component {
         let component;
         switch (modal) {
             case 'Failing Stars':
-                component = {FailingStarsContainer};
+                component = <FailingStarsContainer/>;
                 break;
             default:
                 return null;
@@ -23,7 +23,7 @@ class Modal extends React.Component {
             <div className='modal-background' onClick={closeModal}>
                 <div className='modal-child' onClick={e => e.stopPropagation()}>
                     {component}
-                    {/* i'm modal */}
+    
                 </div>
                 
             </div>
