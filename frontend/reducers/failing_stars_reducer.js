@@ -10,13 +10,13 @@ const failingStarsReducer = (state={stars:[]}, action) => {
             // only last three stars are kept in the list
             // As the purpose is to display last three stars retrieved, so I decide that even if stars are duplicated, they will still be displayed
             // In case where we don't want to display duplicated values, we can add a check to see if duplication
-            starList.push(action.payload.name)
+            starList.unshift(action.payload.name)
             let length = starList.length;
-            if (length > 3) starList.shift();
+            if (length > 3) starList.pop();
             newState.stars = starList
             return newState
         case RECEIVE_ERRORS:
-            alert("Oups...Something is wrong. Please Try it again!")
+            alert("Oops...Something went wrong. Please try it again!")
         default:
             return state;
     }

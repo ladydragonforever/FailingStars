@@ -7,9 +7,8 @@ class Background extends React.Component{
         return(
            
             <div>
-                <button  onClick={() => this.props.openModal('Failing Stars')}>
-                    {console.log(this.props)}
-                    FailingStars
+                <button  className="button-background" onClick={() => this.props.openModal('Failing Stars')}>
+                    CLICK HERE
                 </button>
             </div>
         )

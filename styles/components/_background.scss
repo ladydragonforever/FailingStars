@@ -1,0 +1,14 @@
+$openDNS-blue: #049fd9;
+.button-background {
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 300px;
+    background-color: $openDNS-blue;
+    color:white;
+    border-radius: 5px; 
+    padding: 15px 25px;;
+    border: 1.5px solid $openDNS-blue;
+    font-size: 20px;
+    font-family: Roboto ,sans-serif;
+}
