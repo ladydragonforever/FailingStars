@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 require('../styles/main.scss');
 import configureStore from './store/store';
-import {fetchStar} from "./actions/failing_stars_actions";
-import {requestStar} from "./util/failing_stars";
-
 import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
