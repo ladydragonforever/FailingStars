@@ -6,7 +6,7 @@ import BackgroundContainer from "../components/background/background_container"
 const App = () => (
     <div>
         <BackgroundContainer/>
-        <Modal/>
+        
     </div>
 )
 

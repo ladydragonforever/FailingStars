@@ -10,15 +10,16 @@ class Modal extends React.Component {
         if (!modal) {
             return null;
         };
-        let component;
-        switch (modal) {
-            case 'Failing Stars':
-                component = <FailingStarsContainer/>;
-                break;
-            default:
-                return null;
-        };
+        // let component;
+        // switch (modal) {
+        //     case 'Failing Stars':
+        //         component = <FailingStarsContainer/>;
+        //         break;
+        //     default:
+        //         return null;
+        // };
 
+        let component = this.props.children;
         return(
             <div className='modal-background' onClick={closeModal}>
                 <div className='modal-child' onClick={e => e.stopPropagation()}>

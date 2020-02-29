@@ -9,7 +9,8 @@ const FailingStars = ({ stars, closeModal, fetchStar }) =>{
             <p className="stars-text">Stars:</p>
             <ul className="stars-list">
                 {
-                    stars.map((star,idx) =>
+                    stars.map(
+                                (star,idx) =>
                                 <li key={idx} className="stars-list-item">
                                         {capitalize(star)}
                                 </li>
