@@ -2,6 +2,7 @@ import {requestStar} from "../util/failing_stars";
 
 export const RECEIVE_STAR = "RECEIVE_STAR";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const SORT = "sort";
 
 const receiveStar = payload => ({
     type: RECEIVE_STAR,
@@ -11,6 +12,10 @@ const receiveStar = payload => ({
 const receiveErrors = payload => ({
     type: RECEIVE_ERRORS,
     payload
+})
+
+export const sort = () => ({
+    type: SORT
 })
 
 

@@ -1,4 +1,4 @@
-import {RECEIVE_STAR, RECEIVE_ERRORS} from "../actions/failing_stars_actions"
+import {RECEIVE_STAR, RECEIVE_ERRORS, SORT} from "../actions/failing_stars_actions"
 //Theoretically we should have a normalized state shape;
 // Considering the simple use case, I did a simplified version of the state shape;
 const failingStarsReducer = (state={stars:[]}, action) => {
@@ -18,6 +18,13 @@ const failingStarsReducer = (state={stars:[]}, action) => {
             return newState
         case RECEIVE_ERRORS:
             alert("Oops...Something went wrong. Please try it again!")
+        case SORT:
+            let newState1 = { ...state };
+            // consider that it contains a list of star names to show
+            let starList1 = newState1.stars.slice();
+            starList1 = starList1.sort()
+            newState1.stars = starList1
+            return newState1 
         default:
             return state;
     }

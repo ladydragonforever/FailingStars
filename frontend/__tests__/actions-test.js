@@ -30,7 +30,7 @@ describe('failing stars actions', () => {
 
         it('should return data', async () => {
             const payload = { data: { id: 2, name: "alpha centauri" }}
-            axios.get = jest.fn(id => (
+            axios.get = jest.fn(() => (
                 Promise.resolve(payload)
             ));
             const expectedActions = [{ type: "RECEIVE_STAR", payload: payload.data }];
@@ -41,7 +41,7 @@ describe('failing stars actions', () => {
 
         it('should handle errors', async () => {
             const error = "503 error"
-            axios.get = jest.fn(id => (
+            axios.get = jest.fn(() => (
                 Promise.reject(error)
             ));
             const expectedActions = [{ type: "RECEIVE_ERRORS", payload: error }];

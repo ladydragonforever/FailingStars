@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import {closeModal} from "../../actions/modal_actions";
-import {fetchStar} from "../../actions/failing_stars_actions"
+import {fetchStar, sort} from "../../actions/failing_stars_actions"
 import FailingStars from "../failing_stars/failing_stars"
 
 const mapStateToProps = state => ({
@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
    
 const mapDispatchToProps = dispatch => ({
     closeModal: () => dispatch(closeModal()),
-    fetchStar: () =>dispatch(fetchStar())
+    fetchStar: () =>dispatch(fetchStar()),
+    sort: ()=>dispatch(sort()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FailingStars);
