@@ -8,9 +8,7 @@ describe('requestStar ', () => {
   it('fetches star data', async () => {
   const payload = { data: { id: 2, name: "alpha centauri" }}
 
-  const promise = new Promise((resolve, reject) =>
-    setTimeout( () => resolve(payload) , 100)
-  );
+  const promise = Promise.resolve();
 
   axios.get = jest.fn((url) => promise);
 

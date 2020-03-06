@@ -3,6 +3,16 @@ $h1-size: 38px;
 $p-size: 22px;
 $openDNS-blue: #049fd9;
 
+@mixin  button-style {
+    display: block;
+    background-color: $openDNS-blue;
+    color:white;
+    border-radius: 5px; 
+    padding: 15px 25px;;
+    border: 1.5px solid $openDNS-blue;
+    font-size: 20px; 
+}
+
 .content-container {
     display: block;
     font-family: $global-font;
@@ -60,21 +70,23 @@ span {
 }
 
 .button-close {
-    display: block;
-    border: 1.5px solid #049fd9;
-    padding: 15px 25px;
-    color: #049fd9;
-    border-radius: 5px;
+    @include button-style;
+    // display: block;
+    // border: 1.5px solid #049fd9;
+    // padding: 15px 25px;
+    // color: #049fd9;
+    // border-radius: 5px;
     margin: 0 25px;
-    font-size: 20px;
+    // font-size: 20px;
 }
 
 .button-add {
-    display: block;
-    background-color: $openDNS-blue;
-    color:white;
-    border-radius: 5px; 
-    padding: 15px 25px;;
-    border: 1.5px solid $openDNS-blue;
-    font-size: 20px;
+    @include button-style;
+    // display: block;
+    // background-color: $openDNS-blue;
+    // color:white;
+    // border-radius: 5px; 
+    // padding: 15px 25px;;
+    // border: 1.5px solid $openDNS-blue;
+    // font-size: 20px;
 }
